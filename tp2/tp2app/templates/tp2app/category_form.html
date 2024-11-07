@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ajouter une Catégorie</title>
+</head>
+<body>
+    <h1>Ajouter une Catégorie</h1>
+    
+    <!-- Formulaire pour ajouter une catégorie -->
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}  <!-- Affiche les champs du formulaire avec des balises <p> autour -->
+        <button type="submit">Enregistrer</button>
+    </form>
+
+    <br>
+    <a href="{% url 'category_list' %}">Retour à la liste des catégories</a>  <!-- Lien pour revenir à la liste des catégories -->
+</body>
+</html>
